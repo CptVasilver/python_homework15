@@ -4,7 +4,7 @@ from selene import browser, be
 
 def test_github_desktop_skip(browser_management):
     if browser_management == 'mobile':
-        pytest.skip(reason='Wrong screen resolution')
+        pytest.skip(reason='Skipped because of wrong screen resolution')
 
     browser.open('/')
     browser.element('.HeaderMenu-link--sign-in').click()
@@ -13,7 +13,7 @@ def test_github_desktop_skip(browser_management):
 
 def test_github_mobile_skip(browser_management):
     if browser_management == 'desktop':
-        pytest.skip(reason='Wrong screen resolution')
+        pytest.skip(reason='Skipped because of wrong screen resolution')
 
     browser.open('/')
     browser.element(".HeaderMenu-toggle-bar").click()
